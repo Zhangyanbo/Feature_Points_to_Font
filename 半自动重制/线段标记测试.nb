@@ -1,0 +1,3596 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    185277,       3588]
+NotebookOptionsPosition[    183125,       3510]
+NotebookOutlinePosition[    183492,       3526]
+CellTagsIndexPosition[    183449,       3523]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["\:5bfc\:5165\:8bad\:7ec3\:6570\:636e", "Subsection",
+ CellChangeTimes->{{3.724641555589492*^9, 3.724641565464764*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "imageSet", "=", 
+   "\"\</Users/yanbozhang/\:9879\:76ee & \:5b58\:6863/02 \:8bbe\:8ba1\:9879\
+\:76ee/\:795e\:5947\:79d8\:8c31\:91cd\:5236/\:56fe\:5e93/5. \
+\:5355\:5b57\:5207\:5272/Full_Set\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.724641389744697*^9, 3.7246414215838737`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"imageFileList", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "\"\<0001\>\"", ",", "\"\<0010\>\"", ",", "\"\<0014\>\"", ",", 
+     "\"\<0018\>\"", ",", "\"\<0024\>\"", ",", "\"\<0026\>\"", ",", 
+     "\"\<0033\>\"", ",", "\"\<0036\>\"", ",", "\"\<0037\>\"", ",", 
+     "\"\<0042\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"imageList", "=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Import", "[", 
+     RowBox[{"imageSet", "<>", "\"\</\>\"", "<>", "#", "<>", "\"\<.png\>\""}],
+      "]"}], "&"}], "/@", "imageFileList"}]}]}], "Input",
+ CellChangeTimes->{{3.724641374391199*^9, 3.724641376298155*^9}, {
+  3.7246414284761133`*^9, 3.724641546989503*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+tLS0tLS0tLS0tLS0tLS0tLS+Rv8H1n2a7Q==
+      "], {{0, 180}, {180, 0}}, {0, 255},
+      
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1:eJztnF1I3Goax8te7eVeHryRUpBhGAIhF1lCCNlACCE3w+ycwDCE4Qxz9swK
+HpnO4nalN0VEEBEpiBdCERkEEfFGpAgiRQ54UQpSDkUo0psiIpQiUuhFyT7P
+8yYzmZn4dTjmnUL+oG2TjPxM3zzfbx5Wxwv/+suDBw+af4VvhZ/++4/Hj3/6
+3z//Bv/48dfmv3/59eea/et/fv7l58d/r+Jl28GXnypVqlSpUqVKlSpVqlSp
+Bkyu6+7yZrirXNM0HVPX9Re8SW4vV5IkA5ktZ+eUN8wtNdphVkDfxzoBZllW
+LAuZBUE4481zGxVlkiJks9mcIFR589xKAAy4wvfGnMlksiRFqfoHBwe8kW6U
+rWmZEFoxfF/TNIc30w36DNaiw+z7rzTU7gVvruu0BCtjBITIRT9k9rxR3mBX
+a16WAXgYBEYPDwCzqqqe54195s12hS4KwPzwIWP+yI4Rs6OKorjHFy5eawDW
+Zm6FR1UV1jgyS1s84eK1YwBYAZgfPnr0aKFz3EM3LpKW+dHFS0DlcmA1gDly
+/FJRYHVLyCwp3OhidHhoMWSCzrS6TiKzhe5RUorFL5wI+7VRUkPmnCQVu09+
+hbucDZmLH/kQ9ul9iZhFxvy05+x+yIzLA77sTS6QPSoBsyoGN7rXWb+t6cQs
+K/gLIbO9xIWyS/MGeDtJYsx697m1crmsy/j75CX06hDu2bY9zge0I9s2Mhmw
+cTkBoHK/Rc582y2CT3FqNQvOqLmAWYPo7xs3WpLdZhYBaoYdvASH7TgOLBlg
+HvV/gzPC4DAvG4Yhd+4zHvq6XwPzhnGoQ8wrATNKhBOcmU9szFsj6Ym3V8ni
+Eukwl+Gy18isI7MgEDNH5K0CMeMNzrK4OScrUebnh+zC9/AQFkNmED/kJ4WC
+gbl2yIxQAbOqzi0uLnYutSxJImTO93nUY8yCQEHGowxzg7Ru1Y3ua98W6ULe
+zJueV9DRMuNCRmZRCpnLJ31XTw4E84brMmaAJGZFJWbJPIy7vB3dmXyZXWLG
+YALDOQWsRHUqFhg0zYhV1bQsN1HQiJDZBuscMsvu1MZ11xOzCbKspBD7BcxV
+QEBm9za1F8YMn7q8d7QrtVuFlekA9WgcxOezsw3LsipH7SNvQ+bkEPuFzJXK
+y9hzJj5zFuWBnYPn5+cJoV2pBjDHJ6br+LhheUakgNlOGOzO+ixQzpIZIT+T
+zSHzGm+oK7VaA9NnyBS/dZjBtAwu8ziwaopMzOrAM7+bnahbuk7lUImCpQxV
+GzEEVYB5hTdgn3Y8VifKZUOPKGHKknMaCwsLK8vLy695E3ar4TiGJrNSAGPG
+20vx6MD2rRqYi3Qzwyqmu80b7UoRsxQy47qgR28kmx3jjXaldiPMooCGApGH
+h4ezX3mjXa3FSkWlXqZcmH8aYVZ5g12v+fn5F69fo3EAXCG8zy98/6PGxL1s
+dI1WsPwVMiuqphMxxs0bm4eDU8XtEq7q3EjQuVIUpcMsSZoymKYE6xsgawxT
+1TjmAYRGZnge5/0WOXGqywTMQQcgyxuxT8CFC6O2YgcunJgbCnryDGOe4s0Y
+0RakWPWAWcJhCGJ+ftBsNtfo7xnmJQeF+evFxXLJxCCph3mVnWfMVIUUBoP5
+vFQAETNEHqzwgonK4nFQsD1iQSkIFsobjqT7+/vT2GHN5yE8RmhMV7WQWdEj
+aeIkMtONl3gWRIG5WaRBKcilmK8rVMB9qwpjnoleStFpbkCZgRdWB6hrqGcV
+Hz2VMZu8cElHwOz0MOPzl8NYuqtkV2W5Cxru3mrp+vp6gsigfcdBVrBxbqNW
+qy2+mWszd11XhbXC6unN6OHz/f1ZHZQos+//3iTmevDP98SMKyF6Pz8N//DD
+D8MUomL/9eXG3ETV82QZH1kN5wcThu7W+3fTNmVZEeYTSeowj815Ks1zyCzn
+1RDasu3n/JhRTjYzNDTUZq5oUWbspog9zIZlWY0Gp6HYlxjRbV9mAXmofRBb
+yhIceDgi4rphDXGBOvU4VSOrOs7y4uPAI0k/pMfsmb/aw4w3ehhusx7PDHmB
+blYqsMK95EtNY8Rs+sdt5slGI48rQgbmEWpp5QQpYGbNWGBGn6npVqnkeYkn
+YF8M7Kco5uG3HDCbe75f1+BxCxPaR9RbDu6zTIG1aZum2mZ2XTdxZgP7hLA0
+K/4FdkzM8Xy+zYxjVQJ8k48WCJoxO3OcmcuGwfIqx/cXgoFiDawDFZXwC5mn
+2aCVbhdG59bXT/1zYAZ8RTOIOWHk1TazUJpTyF+Icr7NPDKiza6sYG2UVRTa
+uri48D8eHx/jn4nqcqMI7qwcMAcmIWAWtXxlbHx8/KqeYfKaBJpwtLykUJEg
+ypzPD8DcUUR7QGQausZiT2KmtCpDbZ/66qH/5QvnIswy6v3bg63WcgNyEg8c
+rtXDrDFmWL8Fvqyhlh3HqVTKJfjDBWaHmA1ihkdOhvVMcyeZLBk33rRMccwG
+ytKI2RZosIcNiz660tKeNdSuFuf9KsLseq6DIuaJpRmcB1SJmXJrjN9ifsDR
+xvKzskpOJDFo3z8dK5fR9gMz7poBk2yUj+kMKw5cx3wAq0dBa0jMYt7dSQz7
+25vpyabHmGsrG4zYv8DKhqEEzBgNRT9zerq3VCwEzFlmCk3XTbo2cw7MES+x
+QtUYdfWYKp8ZuOWdcxR8OBFmNWDmOlvg+4siPn/S1Lodjnbh0a9vZyGUZ8yO
+U7Btm65C20jBncNzwuBklJipVIfTxBDnv/XXAE3D+kfIXBjdqeNQo4qxPzLL
+Srlc5tTbeuI4codZxkBT8gpIFWVuhCniOQ38Z4FZtpKvFDB9KQMRsxrInHeQ
+2aahNWJ2P11MTU1FormAGYcHOc0zTpWBWWceBScgGLPEmDVrYaF3TmmdMdOQ
+JjBzKO2SoXYDZrK8DuMl5kbMJ9bDWnQWEhRY3kkTr+GKdEwTmQXahLLu+zuV
+LLvnRuxnOswC1SQTRj61LJXJYOWhMh0eD5jjXfQmMZth1TFpZqvDbBizrVaw
+o4qYsWIUu1lpHx9MhZpYuWAnWYJC16YoAXOkeLXGmEVxOvZjGAeyajT8XyRa
+PVqp2wGzXpqemema3bmeGWddyY1newKT+9UnSFrazDP95yFN/H1+evoKZhZn
+s47t/XK29e6wDlE/Y9at2F2BrVbL9z9HvdwkWpgP7O9t5qQi6a+VSoWYX2y/
+evXq9/iL8Ldxqd4SHHhnWXoY7B8ErQq0LMkyX7eBsU6LRkHmc1wnbw6KLNQX
+S6317Tzb8kFepXXNT/lzmZ/csHexTuZMkSTqC9I8vBpuepOlYN4fmQckQUd1
+M5OtDgJQZKXpDsacYGJ4k54C8OrnmeuYlcFhHgPX6E7A8mGd7n3WERIEmYr8
+EeZgfXOFvTw729raqoIPJ3Mhz5yPjUEOMi4wgeez8OUWcnV+YiTo2IM7rN/8
+g+9D346OjhZKlI9Qfz5gVtBD7wbMYPnsM9/f3UVP/YHGlUawKaAUb/zx96CP
+2DwO/GEcs7+zs/Oq+yNYUSdmzbKSZn6DNeeC0lGUWQ2Z+4UNIXoipb69vvch
+yJPLhUIe1KyCY8OhroAXI0/GXKpWxzd9v4kJQGxXmJhlnAuTpCdJMdugvBPD
+bLrPOncWN9WLhZgSBjHTrydJnxJlprIotauNvM6Y7a63Cz2nUj/8Or37olmV
+GmONhAL+SYAOmV0tZKZmq9QTO4TMSv7kJDpmYCfNDNoudjPX8jrb5dqzVW0a
+t95h9k3meTI8vEdrg5iVJN9esFivB8zuG0gA7Fhmf1UWOsxwxzVavVuMmeas
+En/jwuna2hqbOzOQmRoUR11X7BOz2GamMTXGPEI1Jm6bg77VDFa9l/sKLOS1
+I8zaNjAzNyhpyefcHbHxAATDCkfXqT00JyiV7jjVeM/YxgquzLNRZuD40HUS
+ly0LRhnzot9gvQBJ58hcaTNDkIGb77rOdpjZd33FYswKx/ts2zQXaLAuEMYb
+XacP2N4gSK0Ys0Cv1sJAFFY3p7eBPbWpYqCzTd79zP4sMdueng0LNcF7RYCZ
+z4amGvoX0zQNfGEBsw+9xdBakLdidsWYVfwtcDyFB/FerVYsOljK1XUTqXE8
+t6+qFGU2ZXo7C2aCFpe9xx9qtVo+7zhWlLl/Tm5dphaLBsyls+f0qiRk5tJK
+mSxiz9sJmB13dGpzP/bCUbIshjG64/vvguQ7x4P5ZLQYMjv15rU70f1jSBKe
+sUj6U0AscmDGGClgvtMOzCe54A1KgBxTT71PTbSZ72RjNzFTRGY0j9v3BRen
+81aLmD3PW7j56qiGhoYkel0VGOdkZ7WReWJi+g+8pxWZDeYN5Xd/Ptg1AubW
+HZLPk5dLS0v0zqRLYDbGFB7Md9FmQQuS81e+7wGzgOtZHWRmneoJGnU7rQJu
+LKSgFAPtgX0VJmMOXskidphVdfLmD3MSq+S1mXHugN5ipg/wS2lngTnHXgCH
+/QlVNbAzrul8d9bcoMtqyJxhO04xYq3x3CZ2G7WIWWXDpCNYKJfjJiQGTCxh
+DJlx2yZvoluIoCXWycSh+CtaygOlFwTN3gkNzBXePLdTg83UiVjUeMYb5rai
+CWlF4bCN7Y9rGphLWFYYrGH56wX+pFQqNW++cIDklVC8KVKlSpUqVapUqVKl
+SpUq1fes/wPXvz9c
+      "], {{0, 180}, {180, 0}}, {0, 255},
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+0q6d
+      "], {{0, 180}, {180, 0}}, {0, 255},
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+      "], {{0, 180}, {180, 
+      0}}, {0, 255},
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+SQVO
+      "], {{0, 180}, {180, 0}}, {0, 255},
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+WGONNdbvpP8B4jfDhg==
+      "], {{0, 180}, {180, 0}}, {0, 255},
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+E1+cOw==
+      "], {{0, 180}, {180, 0}}, {0, 255},
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+EAgEAoFAIBAIBAKBQCAQCAQCwXD8C/cz8J8=
+      "], {{0, 180}, {180, 0}}, {0, 255},
+      
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+GDL/B+qqe8o=
+      "], {{0, 180}, {180, 0}}, {0, 255},
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}], ",", 
+   GraphicsBox[
+    TagBox[RasterBox[CompressedData["
+1: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
+      "], {{0, 180}, {180, 0}}, {
+      0, 255},
+      ColorFunction->GrayLevel],
+     BoxForm`ImageTag[
+     "Byte", ColorSpace -> "Grayscale", Interleaving -> None, MetaInformation -> 
+      Association[
+       "Exif" -> Association[
+         "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com"], "XMP" -> 
+        Association[
+         "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+          "PhotoshopSchema" -> Association["ColorMode" -> 1], "BasicSchema" -> 
+          Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+            "MetadataDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.], 
+            "ModifyDate" -> DateObject[{2017, 11, 5}, 
+              TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 8.]], 
+          "MediaManagementSchema" -> 
+          Association[
+           "DocumentID" -> "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+            "InstanceID" -> "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+            "OriginalDocumentID" -> 
+            "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], "Comments" -> 
+        Association[
+         "XML:com.adobe.xmp" -> 
+          "<?xpacket begin=\:feff id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta \
+xmlns:x=adobe:ns:meta/ x:xmptk=XMP Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+          "Created with the Wolfram Language for Students - Personal Use Only \
+: www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+            TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 8.]]]],
+     Selectable->False],
+    DefaultBaseStyle->"ImageGraphics",
+    ImageSizeRaw->{180, 180},
+    PlotRange->{{0, 180}, {0, 180}}]}], "}"}]], "Output",
+ CellChangeTimes->{3.724641548124937*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:6807\:8bb0\:951a\:70b9", "Section",
+ CellChangeTimes->{{3.72464174564053*^9, 3.724641747205846*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\:51fd\:6570", "Subsection",
+ CellChangeTimes->{3.724646399992337*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Mark", "[", "img_", "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"DynamicModule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"outline", "=", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"marks", "=", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"ol", "=", "True"}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Panel", "[", "\[IndentingNewLine]", 
+     RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Save\>\"", ",", 
+           RowBox[{"Return", "[", 
+            RowBox[{"{", 
+             RowBox[{"outline", ",", "marks"}], "}"}], "]"}]}], "]"}], "}"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Clear\>\"", ",", 
+           RowBox[{
+            RowBox[{"outline", "=", 
+             RowBox[{"{", "}"}]}], ";", 
+            RowBox[{"marks", "=", 
+             RowBox[{"{", "}"}]}], ";", 
+            RowBox[{"ol", "=", "True"}]}]}], "]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Mark\>\"", ",", 
+           RowBox[{"ol", "=", "False"}]}], "]"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"ClickPane", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "@", 
+            RowBox[{"Show", "[", 
+             RowBox[{"img", ",", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Hue", "[", 
+                  RowBox[{"0.2", ",", "0.7", ",", "0.7", ",", "0.5"}], "]"}], 
+                 ",", 
+                 RowBox[{"EdgeForm", "[", "Dashed", "]"}], ",", 
+                 RowBox[{"Polygon", "[", "outline", "]"}], ",", "Orange", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Disk", "[", 
+                    RowBox[{"#", ",", "3"}], "]"}], "&"}], "/@", "outline"}], 
+                 ",", "Green", ",", 
+                 RowBox[{"Line", "[", "marks", "]"}], ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Disk", "[", 
+                    RowBox[{"#", ",", "3"}], "]"}], "&"}], "/@", "marks"}]}], 
+                "}"}], "]"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{"ol", ",", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"outline", ",", "#"}], "]"}], ",", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"marks", ",", "#"}], "]"}]}], "]"}], "&"}]}], "]"}], 
+         "}"}]}], "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", "]"}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.724641696383543*^9, 3.7246416974691763`*^9}, {
+   3.724641740055484*^9, 3.724641906247602*^9}, {3.724641943537733*^9, 
+   3.724641953175108*^9}, {3.7246419850945587`*^9, 3.7246421554443073`*^9}, {
+   3.724644430838517*^9, 3.7246444624534073`*^9}, {3.724645003570508*^9, 
+   3.724645024306847*^9}, {3.724645154194681*^9, 3.7246451649024897`*^9}, {
+   3.7246452266322937`*^9, 3.724645278965172*^9}, {3.7246453133587837`*^9, 
+   3.7246453336285152`*^9}, {3.724645508678461*^9, 3.724645509569195*^9}, {
+   3.724645692783003*^9, 3.724645777891279*^9}, {3.7246458217379713`*^9, 
+   3.724645843074835*^9}, {3.724645920875862*^9, 3.724645984350914*^9}, 
+   3.724646040305338*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MarkList", "[", 
+   RowBox[{"imglist_", ",", "index_", ",", "dataset_"}], "]"}], ":=", 
+  "\[IndentingNewLine]", 
+  RowBox[{"DynamicModule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"outline", "=", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"marks", "=", 
+       RowBox[{"{", "}"}]}], ",", 
+      RowBox[{"ol", "=", "True"}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{"Panel", "[", "\[IndentingNewLine]", 
+     RowBox[{"Grid", "[", "\[IndentingNewLine]", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Save\>\"", ",", 
+           RowBox[{"ToExpression", "[", 
+            RowBox[{"dataset", "<>", "\"\<[[\>\"", "<>", 
+             RowBox[{"ToString", "[", "index", "]"}], "<>", "\"\<]]=\>\"", "<>", 
+             RowBox[{"ToString", "[", 
+              RowBox[{"{", 
+               RowBox[{"outline", ",", "marks"}], "}"}], "]"}]}], "]"}]}], 
+          "]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Clear\>\"", ",", 
+           RowBox[{
+            RowBox[{"outline", "=", 
+             RowBox[{"{", "}"}]}], ";", 
+            RowBox[{"marks", "=", 
+             RowBox[{"{", "}"}]}], ";", 
+            RowBox[{"ol", "=", "True"}]}]}], "]"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Mark\>\"", ",", 
+           RowBox[{"ol", "=", "False"}]}], "]"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"ClickPane", "[", 
+          RowBox[{
+           RowBox[{"Dynamic", "@", 
+            RowBox[{"Show", "[", 
+             RowBox[{
+              RowBox[{
+              "imglist", "\[LeftDoubleBracket]", "index", 
+               "\[RightDoubleBracket]"}], ",", 
+              RowBox[{"Graphics", "[", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"Hue", "[", 
+                  RowBox[{"0.2", ",", "0.7", ",", "0.7", ",", "0.5"}], "]"}], 
+                 ",", 
+                 RowBox[{"EdgeForm", "[", "Dashed", "]"}], ",", 
+                 RowBox[{"Polygon", "[", "outline", "]"}], ",", "Orange", ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Disk", "[", 
+                    RowBox[{"#", ",", "3"}], "]"}], "&"}], "/@", "outline"}], 
+                 ",", "Green", ",", 
+                 RowBox[{"Line", "[", "marks", "]"}], ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"Disk", "[", 
+                    RowBox[{"#", ",", "3"}], "]"}], "&"}], "/@", "marks"}]}], 
+                "}"}], "]"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"If", "[", 
+             RowBox[{"ol", ",", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"outline", ",", "#"}], "]"}], ",", 
+              RowBox[{"AppendTo", "[", 
+               RowBox[{"marks", ",", "#"}], "]"}]}], "]"}], "&"}]}], "]"}], 
+         "}"}]}], "\[IndentingNewLine]", "}"}], "\[IndentingNewLine]", "]"}], 
+     "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}]], "Input",\
+
+ CellChangeTimes->{{3.7246460797301893`*^9, 3.724646172599909*^9}, {
+  3.724646277363607*^9, 3.7246462802001743`*^9}, {3.724646328111678*^9, 
+  3.724646339275943*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:6807\:8bb0", "Subsection",
+ CellChangeTimes->{{3.724646406490402*^9, 3.724646408336226*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"points", "=", 
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"{", "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"Length", "[", "imageList", "]"}], "}"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.724646201252442*^9, 3.72464621730249*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}], ",", 
+   RowBox[{"{", "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.724646217692403*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Short", "/@", "points"}]], "Input",
+ CellChangeTimes->{{3.7246466363745317`*^9, 3.724646641891904*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"73.5742`", ",", "118.483`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"119.164`", ",", "130.546`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"92.3047`", ",", "140.581`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"86.0508`", ",", "78.8545`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"116.313`", ",", "86.4014`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"88.293`", ",", "87.2568`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"78.8906`", ",", "119.804`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"121.875`", ",", "131.296`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"89.4844`", ",", "136.284`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"86.3906`", ",", "78.8545`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"129.57`", ",", "89.2998`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"89.8203`", ",", "87.3584`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"78.4883`", ",", "114.897`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"119.164`", ",", "126.456`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"91.8906`", ",", "139.28`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"85.8867`", ",", "83.124`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"119.613`", ",", "92.0459`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"86.6836`", ",", "89.0576`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"81.8555`", ",", "118.706`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"120.656`", ",", "134.483`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"89.2344`", ",", "139.886`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"84.5195`", ",", "121.116`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"116.547`", ",", "129.241`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"92.3984`", ",", "138.722`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"78.0313`", ",", "90.4873`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"120.594`", ",", "99.0186`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"89.4023`", ",", "101.901`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short], ",", 
+   TagBox[
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"88.9375`", ",", "98.1904`"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"119.609`", ",", "110.019`"}], "}"}], ",", 
+        RowBox[{"\[LeftSkeleton]", "11", "\[RightSkeleton]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"90.5898`", ",", "109.812`"}], "}"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], "}"}]}], "}"}],
+    Short]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.72464631376042*^9, {3.72464637182607*^9, 3.7246463909828863`*^9}, 
+   3.724646470170424*^9, 3.7246465150193443`*^9, {3.724646631783993*^9, 
+   3.7246466493216057`*^9}, 3.7246466824250193`*^9, 3.724646718685684*^9, 
+   3.724646764543743*^9, 3.724646799519267*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Length", "/@", "#"}], "&"}], "/@", "points"}]], "Input",
+ CellChangeTimes->{{3.724646809697192*^9, 3.7246468170523043`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"14", ",", "3"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.7246468037331038`*^9, 3.724646817618782*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"NotebookDirectory", "[", "]"}], "<>", "\"\<points.mx\>\""}], ",",
+    "points"}], "]"}]], "Input",
+ CellChangeTimes->{{3.7246468312385473`*^9, 3.724646849850247*^9}}],
+
+Cell[BoxData["\<\"/Users/yanbozhang/\:9879\:76ee & \:5b58\:6863/02 \:8bbe\
+\:8ba1\:9879\:76ee/\:795e\:5947\:79d8\:8c31\:91cd\:5236/\:534a\:81ea\:52a8\
+\:91cd\:5236/points.mx\"\>"], "Output",
+ CellChangeTimes->{3.724646850434545*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"MarkList", "[", 
+  RowBox[{"imageList", ",", "10", ",", "\"\<points\>\""}], "]"}]], "Input",
+ CellChangeTimes->{{3.724646220526638*^9, 3.724646232978451*^9}, {
+   3.724646283967615*^9, 3.724646284129078*^9}, {3.7246464294190474`*^9, 
+   3.724646429602337*^9}, 3.724646472948593*^9, {3.724646518352195*^9, 
+   3.724646519012985*^9}, 3.724646559803566*^9, 3.7246465947918*^9, {
+   3.7246466512052717`*^9, 3.724646651569503*^9}, {3.724646685010552*^9, 
+   3.724646685322549*^9}, {3.72464672129198*^9, 3.7246467214823503`*^9}, {
+   3.724646767047044*^9, 3.7246467675555077`*^9}}],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`outline$$ = {{88.9375, 98.1904296875}, {
+  119.609375, 110.0185546875}, {133.171875, 103.6552734375}, {126.40234375, 
+  40.3544921875}, {113.703125, 17.5341796875}, {94.703125, 42.1240234375}, {
+  110.55859375, 39.2177734375}, {117.98828125, 70.9013671875}, {117.98828125, 
+  97.1552734375}, {80.859375, 89.7919921875}, {47.75390625, 79.7255859375}, {
+  68.75, 95.5810546875}, {76.671875, 108.2880859375}, {90.58984375, 
+  109.8115234375}}, $CellContext`marks$$ = {{89.96875, 97.2099609375}, {
+  117.8828125, 96.4638671875}, {114.78515625, 
+  16.6240234375}}, $CellContext`ol$$ = False}, 
+  PanelBox[
+   TagBox[GridBox[{
+      {
+       ButtonBox["\<\"Save\"\>",
+        Appearance->Automatic,
+        ButtonFunction:>ToExpression[
+          StringJoin["points", "[[", 
+           ToString[10], "]]=", 
+           ToString[{$CellContext`outline$$, $CellContext`marks$$}]]],
+        Evaluator->Automatic,
+        Method->"Preemptive"]},
+      {
+       ButtonBox["\<\"Clear\"\>",
+        Appearance->Automatic,
+        ButtonFunction:>($CellContext`outline$$ = {}; $CellContext`marks$$ = \
+{}; $CellContext`ol$$ = True),
+        Evaluator->Automatic,
+        Method->"Preemptive"]},
+      {
+       ButtonBox["\<\"Mark\"\>",
+        Appearance->Automatic,
+        ButtonFunction:>($CellContext`ol$$ = False),
+        Evaluator->Automatic,
+        Method->"Preemptive"]},
+      {
+       TagBox[
+        DynamicBox[ToBoxes[
+          Show[
+           Part[{
+             Image[CompressedData["
+1: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
+tLS0tLS0tLS0tLS0tLS0tLS+Rv8H1n2a7Q==
+              "], "Byte", ColorSpace -> 
+              "Grayscale", Interleaving -> None, MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+SpUq1fes/wPXvz9c
+              "], "Byte", ColorSpace -> "Grayscale", 
+              Interleaving -> None, MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+0q6d
+              "], "Byte", ColorSpace -> "Grayscale", Interleaving -> 
+              None, MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+              "], "Byte", 
+              ColorSpace -> "Grayscale", Interleaving -> None, 
+              MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+SQVO
+              "], "Byte", ColorSpace -> "Grayscale", Interleaving -> 
+              None, MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+WGONNdbvpP8B4jfDhg==
+              "], "Byte", ColorSpace -> "Grayscale", 
+              Interleaving -> None, MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+E1+cOw==
+              "], "Byte", ColorSpace -> "Grayscale", Interleaving -> 
+              None, MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+EAgEAoFAIBAIBAKBQCAQCAQCwXD8C/cz8J8=
+              "], "Byte", ColorSpace -> 
+              "Grayscale", Interleaving -> None, MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+GDL/B+qqe8o=
+              "], "Byte", ColorSpace -> "Grayscale", 
+              Interleaving -> None, MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]], 
+             Image[CompressedData["
+1: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
+              "], "Byte", 
+              ColorSpace -> "Grayscale", Interleaving -> None, 
+              MetaInformation -> 
+              Association[
+               "Exif" -> Association[
+                 "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com"], "XMP" -> 
+                Association[
+                 "DublinCoreSchema" -> Association["Format" -> "image/png"], 
+                  "PhotoshopSchema" -> Association["ColorMode" -> 1], 
+                  "BasicSchema" -> 
+                  Association["CreateDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{11, 12, 9.}, TimeZone -> 8.], TimeZone -> 8.],
+                     "CreatorTool" -> "Adobe Photoshop CC 2017 (Macintosh)", 
+                    "MetadataDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.], "ModifyDate" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{13, 41, 11.}, TimeZone -> 8.], TimeZone -> 
+                    8.]], "MediaManagementSchema" -> 
+                  Association[
+                   "DocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30", 
+                    "InstanceID" -> 
+                    "xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232", 
+                    "OriginalDocumentID" -> 
+                    "xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30"]], 
+                "Comments" -> 
+                Association[
+                 "XML:com.adobe.xmp" -> 
+                  "<?xpacket begin=\:feff \
+id=W5M0MpCehiHzreSzNTczkc9d?><x:xmpmeta xmlns:x=adobe:ns:meta/ x:xmptk=XMP \
+Core 4.4.0-Exiv2> <rdf:RDF \
+xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#><rdf:Description \
+rdf:about=xmlns:xmpMM=http://ns.adobe.com/xap/1.0/mm/xmlns:dc=http://purl.org/\
+dc/elements/1.1/xmlns:xmp=http://ns.adobe.com/xap/1.0/xmlns:photoshop=http://\
+ns.adobe.com/photoshop/1.0/ \
+xmpMM:DocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+xmpMM:InstanceID=xmp.iid:c89c411d-1756-4da1-909a-ea8e96c18232 \
+xmpMM:OriginalDocumentID=xmp.did:d23f6a7a-e60f-4a6b-9076-fcc5e33bba30 \
+dc:Format=image/png xmp:CreateDate=2017-11-5 11:12:9 xmp:CreatorTool=Adobe \
+Photoshop CC 2017 (Macintosh) xmp:MetadataDate=2017-11-5 13:41:11 \
+xmp:ModifyDate=2017-11-5 13:41:11 photoshop:ColorMode=1/> \
+</rdf:RDF></x:xmpmeta> <?xpacket end=w?>", "Software" -> 
+                  "Created with the Wolfram Language for Students - Personal \
+Use Only : www.wolfram.com", "Creation Time" -> DateObject[{2017, 11, 5}, 
+                    TimeObject[{20, 21, 20.}, TimeZone -> 8.], TimeZone -> 
+                    8.]]]]}, 10], 
+           Graphics[{
+             Hue[0.2, 0.7, 0.7, 0.5], 
+             EdgeForm[Dashed], 
+             Polygon[$CellContext`outline$$], Orange, 
+             Map[Disk[#, 3]& , $CellContext`outline$$], Green, 
+             Line[$CellContext`marks$$], 
+             Map[Disk[#, 3]& , $CellContext`marks$$]}]], StandardForm],
+         ImageSizeCache->{180., {88., 92.}}],
+        EventHandlerTag[{"MouseClicked" :> (If[$CellContext`ol$$, 
+            AppendTo[$CellContext`outline$$, #], 
+            AppendTo[$CellContext`marks$$, #]]& )[
+            MousePosition["EventHandlerAutomatic"]], Method -> "Preemptive", 
+          PassEventsDown -> Automatic, PassEventsUp -> True}]]}
+     },
+     AutoDelete->False,
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Grid"]],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{3.72464623374944*^9, 3.724646285167461*^9, 
+  3.724646343520611*^9, 3.724646430754122*^9, 3.724646473620659*^9, 
+  3.724646519240107*^9, 3.7246465603787613`*^9, 3.724646596585657*^9, 
+  3.7246466520191402`*^9, 3.7246466856007853`*^9, 3.7246467218530817`*^9, 
+  3.724646768018512*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"RotationOneData", "[", 
+   RowBox[{"\[Theta]_", ",", "d_"}], "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"RotationTransform", "[", 
+      RowBox[{"\[Theta]", ",", 
+       RowBox[{"{", 
+        RowBox[{"10", ",", "10"}], "}"}]}], "]"}], "/@", 
+     RowBox[{"d", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+    ",", 
+    RowBox[{
+     RowBox[{"RotationTransform", "[", 
+      RowBox[{"\[Theta]", ",", 
+       RowBox[{"{", 
+        RowBox[{"10", ",", "10"}], "}"}]}], "]"}], "/@", 
+     RowBox[{"d", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}]}], 
+   "}"}]}]], "Input",
+ CellChangeTimes->{{3.7246472185566587`*^9, 3.724647289633461*^9}, {
+  3.724734340745564*^9, 3.72473434473668*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"morePoints", "=", 
+   RowBox[{"points", "~", "Join", "~", 
+    RowBox[{"RotationOneData", "[", 
+     RowBox[{
+      RowBox[{"\[Pi]", "/", "12"}], ",", "points"}], "]"}], "~", "Join", "~", 
+    
+    RowBox[{"RotationOneData", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "\[Pi]"}], "/", "12"}], ",", "points"}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"morePoints", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+           "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+           "\[Transpose]"}], "-", 
+          RowBox[{"#", "\[LeftDoubleBracket]", 
+           RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], 
+        "\[Transpose]"}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+           "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+           "\[Transpose]"}], "-", 
+          RowBox[{"#", "\[LeftDoubleBracket]", 
+           RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], 
+        "\[Transpose]"}]}], "}"}], "&"}], "/@", "morePoints"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.724647144194399*^9, 3.7246471711890574`*^9}, {
+   3.724647297474229*^9, 3.724647336236155*^9}, {3.724647427778185*^9, 
+   3.724647455170266*^9}, {3.7246475397315073`*^9, 3.7246475435793324`*^9}, 
+   3.72464854185254*^9, {3.724648616794263*^9, 3.724648633129175*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+         "\[Transpose]"}], "-", 
+        RowBox[{"#", "\[LeftDoubleBracket]", 
+         RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], 
+      "\[Transpose]"}], ",", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+         "\[Transpose]"}], "-", 
+        RowBox[{"#", "\[LeftDoubleBracket]", 
+         RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], 
+      "\[Transpose]"}]}], "}"}], "&"}], "/@", "points"}]], "Input",
+ CellChangeTimes->{{3.724647465072466*^9, 3.724647527302805*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"points", "\[LeftDoubleBracket]", "1", 
+  "\[RightDoubleBracket]"}]], "Input",
+ CellChangeTimes->{{3.7246473545454597`*^9, 3.724647355809729*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"73.5742`", ",", "118.483`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"119.164`", ",", "130.546`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"134.699`", ",", "117.515`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"123.48`", ",", "50.8076`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"107.215`", ",", "31.9365`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"93.7656`", ",", "47.5928`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"110.172`", ",", "47.5928`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"121.18`", ",", "83.5225`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"121.59`", ",", "117.78`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"68.0273`", ",", "111.999`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"43.957`", ",", "103.823`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"64.9258`", ",", "123.19`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"77.2188`", ",", "145.667`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"92.3047`", ",", "140.581`"}], "}"}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"74.8945`", ",", "116.854`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"121.801`", ",", "119.284`"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"107.305`", ",", "30.21`"}], "}"}]}], "}"}]}], "}"}]], "Output",\
+
+ CellChangeTimes->{3.724647356059808*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Ts", "=", 
+   RowBox[{"Train", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "/@", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"morePoints", "\[Transpose]"}], "\[LeftDoubleBracket]", "2", 
+        "\[RightDoubleBracket]"}], ")"}]}], ",", 
+     RowBox[{
+      RowBox[{"morePoints", "\[Transpose]"}], "\[LeftDoubleBracket]", "1", 
+      "\[RightDoubleBracket]"}], ",", "True"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.724646892398266*^9, 3.724646933257701*^9}, {
+  3.7246469670420094`*^9, 3.724647008216263*^9}, {3.724647314897627*^9, 
+  3.724647316193419*^9}, {3.7246473840713243`*^9, 3.724647385601585*^9}, {
+  3.724647439582417*^9, 3.72464744074993*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"anchors", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"10", ",", 
+       RowBox[{"-", "5"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"50", ",", 
+       RowBox[{"-", "5"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"50", ",", 
+       RowBox[{"-", "50"}]}], "}"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Graphics", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"Polygon", "[", 
+     RowBox[{"Ts", ".", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"{", 
+        RowBox[{"anchors", ",", "1"}], "}"}], "]"}]}], "]"}], ",", "Green", 
+    ",", 
+    RowBox[{"Line", "[", "anchors", "]"}], ",", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Disk", "[", 
+       RowBox[{"#", ",", "1"}], "]"}], "&"}], "/@", "anchors"}]}], "}"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.724647016652109*^9, 3.724647112307559*^9}, {
+  3.724647363600676*^9, 3.72464741806538*^9}, {3.7246475655859957`*^9, 
+  3.7246476705348787`*^9}, {3.724647821027255*^9, 3.7246478263195133`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{
+   PolygonBox[{{-0.3615616589920231, 0.2407496161238214}, {
+    52.547468069153425`, 12.022123826361844`}, {62.695499754423345`, 
+    3.2956650774515275`}, {58.14174618036844, -43.28037516302538}, {
+    48.95962668826502, -49.02822229372323}, {
+    33.56582495005799, -32.11342465717931}, {
+    46.8342692064409, -32.86242406418039}, {
+    52.89108194319532, -18.855390435967063`}, {
+    48.50142093389154, -0.3802319734381001}, {-0.9128947936747851, \
+-10.953565579074514`}, {-21.223769562405558`, -33.631058168860974`}, \
+{-7.2746591425503375`, -7.717039798892231}, {-2.842118232414343, 
+    17.023004710869188`}, {11.644577615072972`, 16.964595339713327`}}], 
+   {RGBColor[0, 1, 0], 
+    LineBox[{{10, -5}, {50, -5}, {50, -50}}], {DiskBox[{10, -5}], 
+     DiskBox[{50, -5}], DiskBox[{50, -50}]}}}]], "Output",
+ CellChangeTimes->{
+  3.724647022204673*^9, {3.724647056855218*^9, 3.7246471125722923`*^9}, {
+   3.724647317590514*^9, 3.724647339271332*^9}, {3.7246473699944143`*^9, 
+   3.724647418528432*^9}, 3.724647550946824*^9, {3.724647588858615*^9, 
+   3.724647670751515*^9}, {3.724647821834597*^9, 3.7246478267209044`*^9}, {
+   3.724648545678791*^9, 3.724648548961197*^9}, 3.724648638736518*^9, 
+   3.724734353584895*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:5bf9\:6bd4", "Section",
+ CellChangeTimes->{3.724648907841917*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Graphics", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Hue", "[", 
+       RowBox[{"1", ",", "0.9", ",", "0.9", ",", "0.2"}], "]"}], ",", 
+      RowBox[{"EdgeForm", "[", "None", "]"}], ",", 
+      RowBox[{"Polygon", "[", 
+       RowBox[{"#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+       "]"}], ",", 
+      RowBox[{"EdgeForm", "[", 
+       RowBox[{"{", 
+        RowBox[{"Thick", ",", "Black"}], "}"}], "]"}], ",", 
+      RowBox[{"FaceForm", "[", "White", "]"}], ",", 
+      RowBox[{"Polygon", "[", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"Ts", ".", 
+             RowBox[{"Flatten", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"(", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{
+                    "#", "\[LeftDoubleBracket]", "2", 
+                    "\[RightDoubleBracket]"}], "\[Transpose]"}], "-", 
+                   RowBox[{"#", "\[LeftDoubleBracket]", 
+                    RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}]}], 
+                  ")"}], "\[Transpose]"}], ",", "1"}], "}"}], "]"}]}], ")"}], 
+           "\[Transpose]"}], "+", 
+          RowBox[{"#", "\[LeftDoubleBracket]", 
+           RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], 
+        "\[Transpose]"}], "]"}], ",", 
+      RowBox[{"Darker", "[", "Green", "]"}], ",", 
+      RowBox[{"Line", "[", 
+       RowBox[{"#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+       "]"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Disk", "[", 
+         RowBox[{"#", ",", "3"}], "]"}], "&"}], "/@", 
+       RowBox[{
+       "#", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}]}]}], "}"}],
+     "]"}], "&"}], "/@", "points"}]], "Input",
+ CellChangeTimes->{{3.7246489181035337`*^9, 3.724648981943954*^9}, {
+  3.724649013586913*^9, 3.724649085058186*^9}, {3.724649148137417*^9, 
+  3.724649270811372*^9}, {3.7246493087938023`*^9, 3.724649385226554*^9}, {
+  3.72464942214904*^9, 3.724649451400195*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{73.5742, 118.483}, {119.164, 130.546}, {134.699, 117.515}, {
+      123.48, 50.8076}, {107.215, 31.9365}, {93.7656, 47.5928}, {110.172, 
+      47.5928}, {121.18, 83.5225}, {121.59, 117.78}, {68.0273, 111.999}, {
+      43.957, 103.823}, {64.9258, 123.19}, {77.2188, 145.667}, {92.3047, 
+      140.581}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{73.7692670930806, 118.47571336258527`}, {
+       119.50237077630905`, 131.4470486106187}, {134.22840592818628`, 
+       117.38996920851088`}, {123.95015334601202`, 50.71222961645793}, {
+       107.38363067210638`, 31.882099987043247`}, {95.31094030304104, 
+       46.75787136438562}, {111.01302588090996`, 46.99321593106859}, {
+       121.15821901800639`, 82.94687268945758}, {121.55903387231366`, 
+       118.76856151080182`}, {67.79660453456678, 111.62753982732701`}, {
+       44.95189464508945, 103.22961928074423`}, {65.38719594145161, 
+       123.8035739399653}, {75.87158765370432, 147.47819181151584`}, {
+       91.43712048138501, 141.28481819637787`}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{74.8945, 116.854}, {121.801, 119.284}, {107.305, 30.21}}], {
+        DiskBox[{74.8945, 116.854}, 3], DiskBox[{121.801, 119.284}, 3], 
+        DiskBox[{107.305, 30.21}, 3]}}}}], ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{86.0508, 78.8545}, {116.313, 86.4014}, {129.07, 77.6982}, {
+      120.52, 30.9287}, {106.434, 18.3311}, {93.3711, 32.9404}, {108.613, 
+      32.2061}, {114.391, 51.0498}, {115.785, 76.7061}, {80.9766, 73.3428}, {
+      49.8359, 65.6904}, {67.3984, 77.0225}, {75.6719, 88.0381}, {88.293, 
+      87.2568}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{86.1346143229074, 78.80641116370424}, {117.42830300926245`,
+        86.5522799090513}, {129.42652316287644`, 77.35714625006489}, {
+       120.2528779278628, 31.092487465820163`}, {106.53651506269168`, 
+       18.35652697227132}, {93.56489691854468, 34.19919830090723}, {
+       108.39440766642323`, 33.143819038725525`}, {114.50551154615044`, 
+       52.665426953989694`}, {115.85065659451412`, 77.06453989259325}, {
+       80.73939815750816, 73.06400876333855}, {49.9834207607694, 
+       65.69160058582789}, {68.16803190031673, 76.75519140173752}, {
+       76.24799653206571, 86.88029123019555}, {88.5001244469904, 
+       86.42288904671291}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{87.1406, 77.2725}, {115.957, 77.6396}, {107.336, 
+        16.8584}}], {DiskBox[{87.1406, 77.2725}, 3], 
+        DiskBox[{115.957, 77.6396}, 3], DiskBox[{107.336, 16.8584}, 3]}}}}], 
+   ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{78.8906, 119.804}, {121.875, 131.296}, {135.117, 115.698}, {
+      123.258, 51.3623}, {103.961, 32.2998}, {94.2539, 48.9795}, {110.078, 
+      48.4795}, {119.391, 82.1748}, {121.262, 119.753}, {70.6094, 110.702}, {
+      44.9141, 103.03}, {66.9102, 122.917}, {74.2656, 142.925}, {89.4844, 
+      136.284}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{78.50867208790613, 119.77476260175999`}, {
+       120.87682605252147`, 129.3341553633423}, {134.90861489368558`, 
+       115.3047758259944}, {121.1537540632628, 50.58356615203547}, {
+       103.72472816347181`, 32.512712036110244`}, {91.71141686766819, 
+       48.97417368785297}, {107.79273517231135`, 47.762595590006896`}, {
+       119.21966506023858`, 81.97671430155941}, {121.95838510867861`, 
+       116.89340948100244`}, {72.02081123011612, 113.38559712689131`}, {
+       46.84490601169421, 107.19814731064449`}, {67.88688228891505, 
+       124.81194228756937`}, {79.0005960564783, 145.6104938598403}, {
+       93.91090313537443, 139.318201018592}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{79.5273, 118.073}, {122.293, 117.483}, {103.703, 
+        30.8896}}], {DiskBox[{79.5273, 118.073}, 3], 
+        DiskBox[{122.293, 117.483}, 3], DiskBox[{103.703, 30.8896}, 3]}}}}], 
+   ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{86.3906, 78.8545}, {129.57, 89.2998}, {137.027, 75.0498}, {
+      127.852, 32.2803}, {115.789, 22.7959}, {103.172, 34.5693}, {117.168, 
+      34.5693}, {123.27, 52.6318}, {125.008, 78.4561}, {82.75, 71.7881}, {
+      57.3477, 60.4951}, {71.5156, 72.5186}, {78.5117, 85.4092}, {89.8203, 
+      87.3584}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{85.85788140820549, 78.92052831818754}, {126.6046418647492, 
+       88.33184045997399}, {137.8975349990114, 78.05980388898968}, {
+       129.12850872416266`, 32.326194902188206`}, {116.0098044406912, 
+       22.07164330522984}, {104.68935234365497`, 36.397047593141814`}, {
+       118.30471873895907`, 36.198288665335255`}, {124.9040013430805, 
+       54.57622932202117}, {124.7147776528389, 78.28296398224249}, {
+       81.51720575687811, 72.12799473904604}, {55.00756922754667, 
+       61.518874069953654`}, {73.05146981076946, 77.01309624213773}, {
+       81.2714890059855, 91.79152290009242}, {94.21680383161701, 
+       90.68620512117957}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{86.75, 77.6006}, {125.066, 77.835}, {116.652, 20.542}}], {
+        DiskBox[{86.75, 77.6006}, 3], DiskBox[{125.066, 77.835}, 3], 
+        DiskBox[{116.652, 20.542}, 3]}}}}], ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{78.4883, 114.897}, {119.164, 126.456}, {133.691, 117.112}, {
+      125.816, 50.0068}, {110.043, 32.0303}, {97.7031, 48.2217}, {112.305, 
+      46.9756}, {121.313, 77.3154}, {122.066, 112.034}, {72.7188, 106.702}, {
+      48.6758, 95.4521}, {66.7109, 118.999}, {74.7422, 144.948}, {91.8906, 
+      139.28}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{78.58327936793573, 114.95067503452242`}, {
+       122.00721174756521`, 125.24705244149777`}, {135.69956568921015`, 
+       113.22064371589663`}, {125.12710474870467`, 49.029291006022675`}, {
+       110.14623102405398`, 32.518654052558844`}, {94.59879911680734, 
+       51.16943840110094}, {111.04300292393879`, 49.32960298232449}, {
+       121.1949446083052, 80.56479758870945}, {121.88995258996593`, 
+       111.9643342270068}, {73.89667769469025, 106.55289386712987`}, {
+       49.69898805510428, 94.67697450942721}, {68.03345825702394, 
+       115.6896665037269}, {76.43473570772997, 139.10025039965473`}, {
+       91.70627251187862, 134.3590001825553}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{79.3672, 113.792}, {122.73, 110.663}, {110.523, 31.2529}}], {
+        DiskBox[{79.3672, 113.792}, 3], DiskBox[{122.73, 110.663}, 3], 
+        DiskBox[{110.523, 31.2529}, 3]}}}}], ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{85.8867, 83.124}, {119.613, 92.0459}, {133.66, 82.9795}, {
+      125.5, 28.6436}, {112.152, 17.5264}, {93.6523, 38.6318}, {111.66, 
+      36.2646}, {119.5, 56.6709}, {118.422, 80.5342}, {85.0586, 74.1123}, {
+      55.5352, 60.9053}, {69.4336, 75.0537}, {72.7344, 88.4834}, {86.6836, 
+      89.0576}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{85.88608878829028, 82.89788821755359}, {
+       120.85037154589952`, 91.31430796592109}, {133.1283326499676, 
+       82.42987176986817}, {124.82454796879222`, 30.857944735482903`}, {
+       111.98496454324112`, 17.81250779204037}, {95.99997729404757, 
+       36.196499631502704`}, {111.69074528917395`, 34.245199018026526`}, {
+       118.55278923260957`, 55.63437185084331}, {118.90332487104057`, 
+       80.13898225770366}, {81.66658154041103, 75.20653577796467}, {
+       53.09637088874105, 63.46186069385409}, {69.82253095682876, 
+       79.15974611999759}, {76.48844067851849, 94.55333847112212}, {
+       89.81604288757076, 93.62067164690583}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{86.668, 81.7881}, {119.555, 79.0303}, {112.898, 16.6123}}], {
+        DiskBox[{86.668, 81.7881}, 3], DiskBox[{119.555, 79.0303}, 3], 
+        DiskBox[{112.898, 16.6123}, 3]}}}}], ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{81.8555, 118.706}, {120.656, 134.483}, {134.328, 119.472}, {
+      129.195, 49.9795}, {116.078, 32.8076}, {97.4336, 52.4014}, {114.207, 
+      50.9717}, {121.488, 85.7178}, {120.531, 120.37}, {78.9453, 112.64}, {
+      54.2031, 99.8623}, {68.8477, 121.026}, {70.7617, 147.272}, {89.2344, 
+      139.886}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{81.55111011380559, 118.38817948600482`}, {
+       117.44334251546728`, 132.6781424562444}, {133.4190747677135, 
+       122.57527974923921`}, {129.28483953549508`, 53.893680782155485`}, {
+       115.481820412862, 32.55466267048554}, {96.63052701682616, 
+       51.00561593651362}, {114.27342849080212`, 50.427381756351096`}, {
+       121.1193872818984, 86.10917519130419}, {119.36810679733931`, 
+       119.58373678794047`}, {76.61201704143645, 110.27783371134537`}, {
+       50.657276499584434`, 97.9581748010141}, {67.54166714161262, 
+       118.62066289810136`}, {74.0335123296015, 141.07234392812313`}, {
+       89.58656962425142, 137.74337718405314`}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{82.6523, 117.171}, {119.781, 119.272}, {116.063, 
+        31.3193}}], {DiskBox[{82.6523, 117.171}, 3], 
+        DiskBox[{119.781, 119.272}, 3], DiskBox[{116.063, 31.3193}, 3]}}}}], 
+   ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{84.5195, 121.116}, {116.547, 129.241}, {133.477, 120.062}, {
+      126.492, 54.5615}, {112.578, 33.2334}, {89.8477, 51.8271}, {110.547, 
+      49.9092}, {117.758, 85.8545}, {117.758, 117.687}, {79.5, 112.472}, {
+      53.875, 100.288}, {70.2773, 119.886}, {79.8203, 142.835}, {92.3984, 
+      138.722}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{84.66882854278185, 121.26972421800124`}, {
+       118.07351348432597`, 132.47025393720423`}, {133.54537517611038`, 
+       122.92950894513602`}, {126.82103887928783`, 53.6437074956082}, {
+       112.84827582065357`, 32.81170883705748}, {91.97313160298458, 
+       54.46688679762194}, {110.58000023566663`, 51.879158394523245`}, {
+       118.8003258289793, 86.49808872123126}, {118.75632178358325`, 
+       118.76283058666074`}, {79.90023016845231, 112.54088661784469`}, {
+       52.35309629287336, 99.92609912625502}, {68.79677295716088, 
+       119.84081472483037`}, {74.85761366094658, 141.7969971502283}, {
+       90.25065245993872, 138.42635546705432`}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{85.543, 120.222}, {119.555, 117.597}, {113.609, 31.8154}}], {
+        DiskBox[{85.543, 120.222}, 3], DiskBox[{119.555, 117.597}, 3], 
+        DiskBox[{113.609, 31.8154}, 3]}}}}], ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{78.0313, 90.4873}, {120.594, 99.0186}, {131.484, 90.7217}, {
+      122.512, 53.2764}, {110.406, 44.7998}, {102.004, 60.542}, {113.074, 
+      60.5225}, {118.383, 74.7764}, {116.688, 91.4639}, {71.4883, 84.4482}, {
+      43.5859, 74.6475}, {66.9102, 91.2568}, {77.0195, 103.858}, {89.4023, 
+      101.901}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{78.27006296454935, 90.54085884530137}, {
+       119.26660019942383`, 100.10665709009719`}, {129.53858952452345`, 
+       90.65571021639452}, {122.1591199549353, 52.305260508880146`}, {
+       110.19123121913056`, 44.93331563581208}, {100.33183908739835`, 
+       57.49450172462456}, {112.70029909836627`, 58.08050222517154}, {
+       117.67921037624963`, 70.97138540764857}, {116.57154871942465`, 
+       91.18788622088135}, {74.41721212295606, 84.02601071756486}, {
+       47.69317829534443, 72.78960344529678}, {65.25402500770744, 
+       87.12057099136429}, {73.06088014398118, 99.4113438574667}, {
+       85.23158073917476, 99.88505827235991}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{79.1758, 89.2451}, {116.801, 90.7607}, {110.965, 
+        43.3311}}], {DiskBox[{79.1758, 89.2451}, 3], 
+        DiskBox[{116.801, 90.7607}, 3], DiskBox[{110.965, 43.3311}, 3]}}}}], 
+   ",", 
+   GraphicsBox[
+    {Hue[1, 0.9, 0.9], Opacity[0.2], EdgeForm[None], 
+     PolygonBox[{{88.9375, 98.1904}, {119.609, 110.019}, {133.172, 103.655}, {
+      126.402, 40.3545}, {113.703, 17.5342}, {94.7031, 42.124}, {110.559, 
+      39.2178}, {117.988, 70.9014}, {117.988, 97.1553}, {80.8594, 89.792}, {
+      47.7539, 79.7256}, {68.75, 95.5811}, {76.6719, 108.288}, {90.5898, 
+      109.812}}], 
+     {EdgeForm[{GrayLevel[0], Thickness[Large]}], FaceForm[GrayLevel[1]], 
+      PolygonBox[{{88.98162337105427, 98.37271443782488}, {117.0052141460358, 
+       109.26134883263884`}, {132.16608873575308`, 101.12363137645019`}, {
+       127.03557631006797`, 37.737593251528956`}, {113.82131276958879`, 
+       17.681603859379052`}, {93.23133301855624, 38.398202486808934`}, {
+       111.43670127967563`, 36.2451624668678}, {117.65414712027763`, 
+       67.08198825513172}, {117.3837814167958, 96.9117581245517}, {
+       84.01932025228986, 90.53842230180469}, {53.91025507806318, 
+       79.18172036720593}, {69.94957060230101, 95.63224617399825}, {
+       75.47933132177249, 112.78564664873166`}, {89.83812979436833, 
+       111.25055455529655`}}], 
+      {RGBColor[0, 
+        NCache[
+         Rational[2, 3], 0.6666666666666666], 0], 
+       LineBox[{{89.9687, 97.21}, {117.883, 96.4639}, {114.785, 16.624}}], {
+        DiskBox[{89.9687, 97.21}, 3], DiskBox[{117.883, 96.4639}, 3], 
+        DiskBox[{114.785, 16.624}, 3]}}}}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.724648969119391*^9, 3.724648982453252*^9}, {
+   3.72464904276375*^9, 3.724649085449381*^9}, 3.72464914934692*^9, {
+   3.724649183211584*^9, 3.724649271179184*^9}, {3.724649320295866*^9, 
+   3.724649385682433*^9}, {3.724649433595443*^9, 3.72464945166761*^9}, 
+   3.724734358102408*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\:5c55\:793a", "Section",
+ CellChangeTimes->{3.724647798660438*^9}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"p1", "=", 
+      RowBox[{"{", 
+       RowBox[{"0", ",", "0"}], "}"}]}], ",", 
+     RowBox[{"p2", "=", 
+      RowBox[{"{", 
+       RowBox[{"50", ",", 
+        RowBox[{"-", "5"}]}], "}"}]}], ",", 
+     RowBox[{"p3", "=", 
+      RowBox[{"{", 
+       RowBox[{"50", ",", 
+        RowBox[{"-", "100"}]}], "}"}]}]}], "}"}], ",", 
+   RowBox[{"Graphics", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Dynamic", "@", 
+        RowBox[{"Polygon", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"p1", "+", "#"}], "&"}], "/@", 
+          RowBox[{"(", 
+           RowBox[{"Ts", ".", 
+            RowBox[{"Flatten", "[", 
+             RowBox[{"{", 
+              RowBox[{"p1", ",", "p2", ",", "p3", ",", "1"}], "}"}], "]"}]}], 
+           ")"}]}], "]"}]}], ",", "Green", ",", 
+       RowBox[{"Dynamic", "@", 
+        RowBox[{"Line", "[", 
+         RowBox[{"{", 
+          RowBox[{"p1", ",", "p2", ",", "p3"}], "}"}], "]"}]}], ",", 
+       RowBox[{"Dynamic", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Disk", "[", 
+           RowBox[{"#", ",", "1"}], "]"}], "&"}], "/@", 
+         RowBox[{"{", 
+          RowBox[{"p1", ",", "p2", ",", "p3"}], "}"}]}], "]"}], ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Locator", "[", 
+          RowBox[{"Dynamic", "[", "p1", "]"}], "]"}], ",", 
+         RowBox[{"Locator", "[", 
+          RowBox[{"Dynamic", "[", "p2", "]"}], "]"}], ",", 
+         RowBox[{"Locator", "[", 
+          RowBox[{"Dynamic", "[", "p3", "]"}], "]"}]}], "}"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", "All"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.724647804337242*^9, 3.724647973417741*^9}, {
+  3.7246480255569267`*^9, 3.724648038005403*^9}, {3.7246480754830723`*^9, 
+  3.724648146745467*^9}, {3.7246482066327868`*^9, 3.724648253312203*^9}, {
+  3.724734289945108*^9, 3.724734300015771*^9}}],
+
+Cell[BoxData[
+ DynamicModuleBox[{$CellContext`p1$$ = {0.41426547986689144`, 
+  0.2631656087908425}, $CellContext`p2$$ = {
+  40.79675868587484, -1.6141037223036676`}, $CellContext`p3$$ = {
+  25.920976378435448`, -54.97853424729172}}, 
+  GraphicsBox[{
+    DynamicBox[Typeset`ToBoxes[
+      Polygon[
+       Map[$CellContext`p1$$ + #& , 
+        Dot[$CellContext`Ts, 
+         Flatten[{$CellContext`p1$$, $CellContext`p2$$, $CellContext`p3$$, 
+           1}]]]], StandardForm, Graphics],
+     ImageSizeCache->{{-24., 240.}, {-152., 59.}}], 
+    {RGBColor[0, 1, 0], 
+     DynamicBox[Typeset`ToBoxes[
+       Line[{$CellContext`p1$$, $CellContext`p2$$, $CellContext`p3$$}], 
+       StandardForm, Graphics],
+      ImageSizeCache->{{71.7606933090101, 
+       204.2393066909899}, {-110.2393066909899, 68.2393066909899}}], 
+     DynamicBox[Typeset`ToBoxes[
+       Map[
+       Disk[#, 1]& , {$CellContext`p1$$, $CellContext`p2$$, \
+$CellContext`p3$$}], StandardForm, Graphics],
+      ImageSizeCache->{{72.37743156194804, 
+       203.85864030708353`}, {-109.64394074304835`, 67.93428362240974}}], {
+      LocatorBox[Dynamic[$CellContext`p1$$]], 
+      LocatorBox[Dynamic[$CellContext`p2$$]], 
+      LocatorBox[Dynamic[$CellContext`p3$$]]}}},
+   ImagePadding->{{0., 1.}, {1.074216, 0.}},
+   PlotRange->{{-23.916338419498775`, 
+    65.4597663136445}, {-102.71602121087635`, 36.19135032140253}},
+   PlotRangePadding->Automatic],
+  DynamicModuleValues:>{}]], "Output",
+ CellChangeTimes->{{3.724647878535635*^9, 3.724647973712646*^9}, {
+   3.7246480143077517`*^9, 3.724648038343742*^9}, {3.724648080865453*^9, 
+   3.724648147181882*^9}, {3.7246482103661203`*^9, 3.724648224016274*^9}, 
+   3.724648254193342*^9, 3.724648554595945*^9, 3.724648640876718*^9, 
+   3.7247343011274633`*^9, 3.724734360794571*^9}]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{808, 831},
+WindowMargins->{{Automatic, 146}, {40, Automatic}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (2016\:5e7410\
+\:67088\:65e5)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 124, 1, 44, "Subsection"],
+Cell[707, 25, 320, 7, 32, "Input"],
+Cell[CellGroupData[{
+Cell[1052, 36, 689, 16, 75, "Input"],
+Cell[1744, 54, 66752, 1158, 220, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[68545, 1218, 108, 1, 64, "Section"],
+Cell[CellGroupData[{
+Cell[68678, 1223, 76, 1, 44, "Subsection"],
+Cell[68757, 1226, 3509, 81, 348, "Input"],
+Cell[72269, 1309, 3358, 82, 369, "Input"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[75664, 1396, 100, 1, 44, "Subsection"],
+Cell[CellGroupData[{
+Cell[75789, 1401, 264, 7, 32, "Input"],
+Cell[76056, 1410, 385, 13, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[76478, 1428, 127, 2, 32, "Input"],
+Cell[76608, 1432, 5546, 157, 222, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[82191, 1594, 171, 4, 32, "Input"],
+Cell[82365, 1600, 721, 23, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[83123, 1628, 241, 6, 32, "Input"],
+Cell[83367, 1636, 232, 3, 32, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[83636, 1644, 599, 9, 32, "Input"],
+Cell[84238, 1655, 70030, 1204, 309, "Output"]
+}, Open  ]],
+Cell[154283, 2862, 769, 21, 54, "Input"],
+Cell[155055, 2885, 1556, 43, 75, "Input"],
+Cell[156614, 2930, 820, 23, 32, "Input"],
+Cell[CellGroupData[{
+Cell[157459, 2957, 169, 3, 32, "Input"],
+Cell[157631, 2962, 1476, 42, 117, "Output"]
+}, Open  ]],
+Cell[159122, 3007, 705, 16, 32, "Input"],
+Cell[CellGroupData[{
+Cell[159852, 3027, 1044, 32, 75, "Input"],
+Cell[160899, 3061, 1254, 22, 309, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[162214, 3090, 73, 1, 64, "Section"],
+Cell[CellGroupData[{
+Cell[162312, 3095, 2161, 54, 75, "Input"],
+Cell[164476, 3151, 14704, 251, 971, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[179229, 3408, 73, 1, 64, "Section"],
+Cell[CellGroupData[{
+Cell[179327, 3413, 1980, 54, 96, "Input"],
+Cell[181310, 3469, 1787, 37, 447, "Output"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
